@@ -1,59 +1,58 @@
+# Creating a dictionary
+my_dict = {
+    "name": "gaurav",
+    "age": 19,
+    "city": "ambala",
+    "job": "student"
+}
 
-# Creating a list
-my_list = [10, 20, 30, 40, 50]
+# 1. Display the original dictionary
+print("Original Dictionary:", my_dict)
 
-# 1. Display the original list
-print("Original List:", my_list)
+# 2. Accessing a value using a key
+print("Value for key 'name':", my_dict["name"])
 
-# 2. Append an element to the list
-my_list.append(60)
-print("After appending 60:", my_list)
+# 3. Adding a new key-value pair
+my_dict["salary"] = 50000
+print("After adding 'salary':", my_dict)
 
-# 3. Insert an element at a specific index
-my_list.insert(2, 25)  # Insert 25 at index 2
-print("After inserting 25 at index 2:", my_list)
+# 4. Updating an existing key-value pair
+my_dict["age"] = 26
+print("After updating 'age':", my_dict)
 
-my_list.remove(40)  
-print("After removing 40:", my_list)
+# 5. Removing an element using `del`
+del my_dict["city"]
+print("After deleting 'city':", my_dict)
 
+# 6. Removing an element using `pop`
+job = my_dict.pop("job")
+print(f"After popping 'job' ({job}):", my_dict)
 
-popped_element = my_list.pop()
-print(f"After poppping  ({popped_element}):", my_list)
+# 7. Getting a value using `get()` (avoiding KeyError)
+print("Using get() for 'name':", my_dict.get("name"))
+print("Using get() for 'address' (not present):", my_dict.get("address", "Not Found"))
 
-popped_element = my_list.pop(2)
-print(f"After popping element at index 2 ({popped_element}):", my_list)
+# 8. Checking if a key exists
+print("Is 'age' in dictionary?", "age" in my_dict)
 
-index = my_list.index(30)
-print("Index of 30:", index)
+# 9. Getting all keys
+print("All Keys:", list(my_dict.keys()))
 
+# 10. Getting all values
+print("All Values:", list(my_dict.values()))
 
-count = my_list.count(20)
-print("Occurrences of 20:", count)
+# 11. Getting all key-value pairs
+print("All Key-Value Pairs:", list(my_dict.items()))
 
-# 9. Reverse the list
-my_list.reverse()
-print("After reversing the list:", my_list)
+# 12. Iterating over dictionary keys
+print("Iterating over keys:")
+for key in my_dict:
+    print(key, "->", my_dict[key])
 
-# 10. Sort the list in ascending order
-my_list.sort()
-print("After sorting in ascending order:", my_list)
+# 13. Copying a dictionary
+copied_dict = my_dict.copy()
+print("Copied Dictionary:", copied_dict)
 
-# 11. Sorting in descending order
-my_list.sort(reverse=True)
-print("After sorting in descending order:", my_list)
-
-# 12. Copy the list
-copied_list = my_list.copy()
-print("Copied List:", copied_list)
-
-# 13. Extend the list with another list
-my_list.extend([70, 80, 90])
-print("After extending with [70, 80, 90]:", my_list)
-
-# 14. Slicing the list
-sliced_list = my_list[1:4]  # Elements from index 1 to 3
-print("Sliced List (index 1 to 3):", sliced_list)
-
-# 15. Clearing the list
-my_list.clear()
-print("After clearing the list:", my_list)
+# 14. Clearing the dictionary
+my_dict.clear()
+print("After clearing the dictionary:", my_dict)
